@@ -34,7 +34,7 @@ const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task displa
 
 const jobBaseData = {
     "Beggar": {name: "Beggar", maxXp: 50, income: 5},
-    "Farmer": {name: "Farmer", maxXp: 100, income: 9},
+    "Farmer": {name: "Farmer", maxXp: 100, income: 10},
     "Fisherman": {name: "Fisherman", maxXp: 200, income: 15},
     "Miner": {name: "Miner", maxXp: 400, income: 40},
     "Blacksmith": {name: "Blacksmith", maxXp: 800, income: 80},
