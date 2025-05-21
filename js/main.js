@@ -24,11 +24,11 @@ var skillWithLowestMaxXp = null
 const autoPromoteElement = document.getElementById("autoPromote")
 const autoLearnElement = document.getElementById("autoLearn")
 
-const updateSpeed = 20
+const updateSpeed = 23
 
 const baseLifespan = 365 * 70
 
-const baseGameSpeed = 7
+const baseGameSpeed = 10
 
 const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task display"]
 
