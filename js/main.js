@@ -69,7 +69,7 @@ const skillBaseData = {
 
     "Mana control": {name: "Mana control", maxXp: 100, effect: 0.03, description: "T.A.A. xp"},
     "Immortality": {name: "Immortality", maxXp: 100, effect: 0.03, description: "Longer lifespan"},
-    "Time warping": {name: "Time warping", maxXp: 100, effect: 0.03, description: "Gamespeed"},
+    "Time warping": {name: "Time warping", maxXp: 100, effect: 0.05, description: "Gamespeed"},
     "Super immortality": {name: "Super immortality", maxXp: 100, effect: 0.03, description: "Longer lifespan"},
 
     "Dark influence": {name: "Dark influence", maxXp: 100, effect: 0.03, description: "All xp"},
