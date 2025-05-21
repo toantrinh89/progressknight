@@ -28,77 +28,77 @@ const updateSpeed = 20
 
 const baseLifespan = 365 * 70
 
-const baseGameSpeed = 5
+const baseGameSpeed = 7
 
 const permanentUnlocks = ["Scheduling", "Shop", "Automation", "Quick task display"]
 
 const jobBaseData = {
-    "Beggar": {name: "Beggar", maxXp: 50, income: 5},
-    "Farmer": {name: "Farmer", maxXp: 100, income: 10},
-    "Fisherman": {name: "Fisherman", maxXp: 200, income: 15},
-    "Miner": {name: "Miner", maxXp: 400, income: 40},
-    "Blacksmith": {name: "Blacksmith", maxXp: 800, income: 80},
-    "Merchant": {name: "Merchant", maxXp: 1600, income: 150},
+    "Beggar": {name: "Beggar", maxXp: 50, income: 10},
+    "Farmer": {name: "Farmer", maxXp: 100, income: 15},
+    "Fisherman": {name: "Fisherman", maxXp: 200, income: 25},
+    "Miner": {name: "Miner", maxXp: 400, income: 60},
+    "Blacksmith": {name: "Blacksmith", maxXp: 800, income: 120},
+    "Merchant": {name: "Merchant", maxXp: 1600, income: 250},
 
-    "Squire": {name: "Squire", maxXp: 100, income: 5},
-    "Footman": {name: "Footman", maxXp: 1000, income: 50},
-    "Veteran footman": {name: "Veteran footman", maxXp: 10000, income: 120},
+    "Squire": {name: "Squire", maxXp: 100, income: 10},
+    "Footman": {name: "Footman", maxXp: 1000, income: 75},
+    "Veteran footman": {name: "Veteran footman", maxXp: 10000, income: 180},
     "Knight": {name: "Knight", maxXp: 100000, income: 300},
-    "Veteran knight": {name: "Veteran knight", maxXp: 1000000, income: 1000},
-    "Elite knight": {name: "Elite knight", maxXp: 7500000, income: 3000},
-    "Holy knight": {name: "Holy knight", maxXp: 40000000, income: 15000},
-    "Legendary knight": {name: "Legendary knight", maxXp: 150000000, income: 50000},
+    "Veteran knight": {name: "Veteran knight", maxXp: 1000000, income: 1500},
+    "Elite knight": {name: "Elite knight", maxXp: 7500000, income: 4500},
+    "Holy knight": {name: "Holy knight", maxXp: 40000000, income: 20000},
+    "Legendary knight": {name: "Legendary knight", maxXp: 150000000, income: 75000},
 
-    "Student": {name: "Student", maxXp: 100000, income: 100},
-    "Apprentice mage": {name: "Apprentice mage", maxXp: 1000000, income: 1000},
-    "Mage": {name: "Mage", maxXp: 10000000, income: 7500},
-    "Wizard": {name: "Wizard", maxXp: 100000000, income: 50000},
-    "Master wizard": {name: "Master wizard", maxXp: 10000000000, income: 250000},
-    "Chairman": {name: "Chairman", maxXp: 1000000000000, income: 1000000},
+    "Student": {name: "Student", maxXp: 100000, income: 200},
+    "Apprentice mage": {name: "Apprentice mage", maxXp: 1000000, income: 2000},
+    "Mage": {name: "Mage", maxXp: 10000000, income: 15000},
+    "Wizard": {name: "Wizard", maxXp: 100000000, income: 150000},
+    "Master wizard": {name: "Master wizard", maxXp: 10000000000, income: 500000},
+    "Chairman": {name: "Chairman", maxXp: 1000000000000, income: 2000000},
 }
 
 const skillBaseData = {
-    "Concentration": {name: "Concentration", maxXp: 100, effect: 0.03, description: "Skill xp"},
-    "Productivity": {name: "Productivity", maxXp: 100, effect: 0.02, description: "Job xp"},
-    "Bargaining": {name: "Bargaining", maxXp: 100, effect: -0.02, description: "Expenses"},
-    "Meditation": {name: "Meditation", maxXp: 100, effect: 0.03, description: "Happiness"},
+    "Concentration": {name: "Concentration", maxXp: 100, effect: 0.04, description: "Skill xp"},
+    "Productivity": {name: "Productivity", maxXp: 100, effect: 0.03, description: "Job xp"},
+    "Bargaining": {name: "Bargaining", maxXp: 100, effect: -0.03, description: "Expenses"},
+    "Meditation": {name: "Meditation", maxXp: 100, effect: 0.04, description: "Happiness"},
 
-    "Strength": {name: "Strength", maxXp: 100, effect: 0.02, description: "Military pay"},
-    "Battle tactics": {name: "Battle tactics", maxXp: 100, effect: 0.02, description: "Military xp"},
-    "Muscle memory": {name: "Muscle memory", maxXp: 100, effect: 0.02, description: "Strength xp"},
+    "Strength": {name: "Strength", maxXp: 100, effect: 0.03, description: "Military pay"},
+    "Battle tactics": {name: "Battle tactics", maxXp: 100, effect: 0.03, description: "Military xp"},
+    "Muscle memory": {name: "Muscle memory", maxXp: 100, effect: 0.03, description: "Strength xp"},
 
-    "Mana control": {name: "Mana control", maxXp: 100, effect: 0.02, description: "T.A.A. xp"},
-    "Immortality": {name: "Immortality", maxXp: 100, effect: 0.02, description: "Longer lifespan"},
-    "Time warping": {name: "Time warping", maxXp: 100, effect: 0.02, description: "Gamespeed"},
-    "Super immortality": {name: "Super immortality", maxXp: 100, effect: 0.02, description: "Longer lifespan"},
+    "Mana control": {name: "Mana control", maxXp: 100, effect: 0.03, description: "T.A.A. xp"},
+    "Immortality": {name: "Immortality", maxXp: 100, effect: 0.03, description: "Longer lifespan"},
+    "Time warping": {name: "Time warping", maxXp: 100, effect: 0.03, description: "Gamespeed"},
+    "Super immortality": {name: "Super immortality", maxXp: 100, effect: 0.03, description: "Longer lifespan"},
 
-    "Dark influence": {name: "Dark influence", maxXp: 100, effect: 0.02, description: "All xp"},
-    "Evil control": {name: "Evil control", maxXp: 100, effect: 0.02, description: "Evil gain"},
-    "Intimidation": {name: "Intimidation", maxXp: 100, effect: -0.02, description: "Expenses"},
-    "Demon training": {name: "Demon training", maxXp: 100, effect: 0.02, description: "All xp"},
-    "Blood meditation": {name: "Blood meditation", maxXp: 100, effect: 0.02, description: "Evil gain"},
-    "Demon's wealth": {name: "Demon's wealth", maxXp: 100, effect: 0.003, description: "Job pay"},
+    "Dark influence": {name: "Dark influence", maxXp: 100, effect: 0.03, description: "All xp"},
+    "Evil control": {name: "Evil control", maxXp: 100, effect: 0.03, description: "Evil gain"},
+    "Intimidation": {name: "Intimidation", maxXp: 100, effect: -0.03, description: "Expenses"},
+    "Demon training": {name: "Demon training", maxXp: 100, effect: 0.03, description: "All xp"},
+    "Blood meditation": {name: "Blood meditation", maxXp: 100, effect: 0.03, description: "Evil gain"},
+    "Demon's wealth": {name: "Demon's wealth", maxXp: 100, effect: 0.005, description: "Job pay"},
     
 }
 
 const itemBaseData = {
     "Homeless": {name: "Homeless", expense: 0, effect: 1},
-    "Tent": {name: "Tent", expense: 15, effect: 1.5},
-    "Wooden hut": {name: "Wooden hut", expense: 100, effect: 2.2},
-    "Cottage": {name: "Cottage", expense: 750, effect: 4},
-    "House": {name: "House", expense: 3000, effect: 7},
-    "Large house": {name: "Large house", expense: 25000, effect: 14},
-    "Small palace": {name: "Small palace", expense: 300000, effect: 30},
-    "Grand palace": {name: "Grand palace", expense: 5000000, effect: 80},
+    "Tent": {name: "Tent", expense: 15, effect: 2},
+    "Wooden hut": {name: "Wooden hut", expense: 100, effect: 3},
+    "Cottage": {name: "Cottage", expense: 750, effect: 5},
+    "House": {name: "House", expense: 3000, effect: 8},
+    "Large house": {name: "Large house", expense: 25000, effect: 18},
+    "Small palace": {name: "Small palace", expense: 300000, effect: 50},
+    "Grand palace": {name: "Grand palace", expense: 5000000, effect: 100},
 
-    "Book": {name: "Book", expense: 10, effect: 3, description: "Skill xp"},
-    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 3, description: "Strength xp"},
-    "Personal squire": {name: "Personal squire", expense: 200, effect: 4, description: "Job xp"},
-    "Steel longsword": {name: "Steel longsword", expense: 1000, effect: 4, description: "Military xp"},
-    "Butler": {name: "Butler", expense: 7500, effect: 3, description: "Happiness"},
-    "Sapphire charm": {name: "Sapphire charm", expense: 50000, effect: 5, description: "Magic xp"},
-    "Study desk": {name: "Study desk", expense: 1000000, effect: 3, description: "Skill xp"},
-    "Library": {name: "Library", expense: 10000000, effect: 3, description: "Skill xp"},
+    "Book": {name: "Book", expense: 10, effect: 4, description: "Skill xp"},
+    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 4, description: "Strength xp"},
+    "Personal squire": {name: "Personal squire", expense: 200, effect: 5, description: "Job xp"},
+    "Steel longsword": {name: "Steel longsword", expense: 1000, effect: 5, description: "Military xp"},
+    "Butler": {name: "Butler", expense: 7500, effect: 4, description: "Happiness"},
+    "Sapphire charm": {name: "Sapphire charm", expense: 50000, effect: 7, description: "Magic xp"},
+    "Study desk": {name: "Study desk", expense: 1000000, effect: 4, description: "Skill xp"},
+    "Library": {name: "Library", expense: 10000000, effect: 4, description: "Skill xp"},
 }
 
 const jobCategories = {
