@@ -89,16 +89,16 @@ const itemBaseData = {
     "House": {name: "House", expense: 3000, effect: 12},
     "Large house": {name: "Large house", expense: 25000, effect: 20},
     "Small palace": {name: "Small palace", expense: 300000, effect: 60},
-    "Grand palace": {name: "Grand palace", expense: 2000000, effect: 120},
+    "Grand palace": {name: "Grand palace", expense: 2000000, effect: 200},
 
-    "Book": {name: "Book", expense: 10, effect: 5, description: "Skill xp"},
-    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 5, description: "Strength xp"},
-    "Personal squire": {name: "Personal squire", expense: 200, effect: 6, description: "Job xp"},
-    "Steel longsword": {name: "Steel longsword", expense: 1000, effect: 6, description: "Military xp"},
-    "Butler": {name: "Butler", expense: 7500, effect: 6, description: "Happiness"},
+    "Book": {name: "Book", expense: 10, effect: 10, description: "Skill xp"},
+    "Dumbbells": {name: "Dumbbells", expense: 50, effect: 10, description: "Strength xp"},
+    "Personal squire": {name: "Personal squire", expense: 200, effect: 10, description: "Job xp"},
+    "Steel longsword": {name: "Steel longsword", expense: 1000, effect: 10, description: "Military xp"},
+    "Butler": {name: "Butler", expense: 7500, effect: 10, description: "Happiness"},
     "Sapphire charm": {name: "Sapphire charm", expense: 5000, effect: 10, description: "Magic xp"},
-    "Study desk": {name: "Study desk", expense: 100000, effect: 6, description: "Skill xp"},
-    "Library": {name: "Library", expense: 1000000, effect: 6, description: "Skill xp"},
+    "Study desk": {name: "Study desk", expense: 100000, effect: 10, description: "Skill xp"},
+    "Library": {name: "Library", expense: 1000000, effect: 10, description: "Skill xp"},
 }
 
 const jobCategories = {
